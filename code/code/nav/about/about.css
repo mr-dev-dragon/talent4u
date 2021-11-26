@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+nav {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #6116A0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 50px 0 100px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #ffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+nav ul li a.active, nav ul li a:hover {
+  color: #123;
+  background: #BF9CE6;
+}
+
+nav .menu-btn i {
+  color: #ffff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+.red {
+  color: #FF0077;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.top {
+  margin-top: 80px;
+}
+
+.STOP {
+  position: fixed;
+  margin-top: 150px;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+main article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main article img {
+  width: 50rem;
+}
+
+main article aside {
+  margin: 0;
+  width: 50rem;
+  padding: 10rem 5rem 5rem 5rem;
+}
+
+main article aside h1 {
+  color: #FF0077;
+  font-size: 5rem;
+  margin-top: -5rem;
+  margin-bottom: 0.5rem;
+}
+
+main article aside h5 {
+  font-size: 2rem;
+  color: #6116A0;
+  padding: 2rem;
+}
+
+main article aside p {
+  font-size: 1.5rem;
+  color: #BF9CE6;
+  letter-spacing: 1px;
+}
+
+main article aside button {
+  color: #ffff;
+  background-color: #FF0077;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8%;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 773px) {
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #6116A0;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: #FF0077;
+  }
+}
+
+/*888888888888888888888888888888888888888888888888888888888*/
+/*# sourceMappingURL=about.css.map */

@@ -1,0 +1,290 @@
+      @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+  $color1:#FF0077;
+  $color2:#323133;
+  $color3:#fefdff;
+  $color4:rgb(223, 219, 219);
+  $color5:#123;
+  $color6:#8f9296;
+
+      *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+ body,html{
+     height: 100%;
+
+ }
+nav
+{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background:$color2;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+
+    ul
+    {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+       li
+      {
+       margin: 0 5px;
+               
+                a{
+                    color:$color4;
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: 500;
+                    padding: 8px 15px;
+                    border-radius: 5px;
+                    letter-spacing: 1px;
+                    transition: all 0.6s ease;
+
+            
+                }   
+                 a.active,a:hover
+                 {
+                    color:$color5 ;
+                    background: $color3;
+                 }
+       }
+    }
+    .menu-btn i
+    {
+        color: $color4;
+        font-size: 22px;
+        cursor: pointer;
+        display: none;
+    }
+}
+.red{
+  color: $color1 ;
+}
+
+    input[type="checkbox"]
+{
+  display: none;
+}
+
+@media (max-width: 773px) {
+    nav .menu-btn i{
+      display: block;
+    }
+    #click:checked ~ .menu-btn i:before{
+      content: "\f00d";
+    }
+    nav ul{
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      background:$color2;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+        li{
+        width: 100%;
+        margin: 40px 0;
+            a{
+              width: 100%;
+              margin-left: -100%;
+              display: block;
+              font-size: 20px;
+              
+            }
+       }
+    }
+    #click:checked ~ ul{
+      left: 0;
+    }
+
+    #click:checked ~ ul li a{
+      margin-left: 0px;
+    }
+        a.active,
+       a:hover{
+      background: none;
+      color: $color1;
+    }
+
+}
+/*================================================*/
+/*--------------------------------------------*/
+footer{
+ position: fixed;
+ bottom: 0;
+   
+}
+.footer-distributed{
+    background-color: $color2;
+    box-shadow: 0 1px 1px 0 $color5;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    
+    padding: 55px 50px;
+    margin-top: 80px;
+}
+
+ 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+ display: inline-block;
+ vertical-align: top;
+}
+ 
+.footer-distributed .footer-left{
+ width: 40%;
+}
+ 
+.footer-distributed h3{
+ color:  $color4;
+ font: normal 50px 'Cookie', cursive;
+ margin: 0;
+}
+ 
+.footer-distributed h3 span{
+ color:  $color1;
+ font: normal 50px 'Cookie', cursive;
+}
+ 
+ 
+.footer-distributed .footer-links{
+ color: $color4;
+ margin: 30px 0 12px;
+ padding: 0;
+}
+ 
+.footer-distributed .footer-links a{
+ display:inline-block;
+ line-height: 1.8;
+ text-decoration: none;
+ color:  inherit;
+}
+ 
+.footer-distributed .footer-company-name{
+ color:  $color6;
+ font-size: 16px;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ margin: 40px 20px 0px 40px ;
+}
+ 
+ 
+.footer-distributed .footer-center{
+ width: 35%;
+}
+ 
+.footer-distributed .footer-center i{
+ background-color: $color1;
+ color: $color4;
+ font-size: 25px;
+ width: 38px;
+ height: 38px;
+ border-radius: 50%;
+ text-align: center;
+ line-height: 42px;
+ margin: 10px 15px;
+ vertical-align: middle;
+}
+ 
+.footer-distributed .footer-center i.fa-envelope{
+ font-size: 17px;
+ line-height: 38px;
+}
+ 
+.footer-distributed .footer-center p{
+ display: inline-block;
+ color: $color4;
+ vertical-align: middle;
+ margin:0;
+}
+ 
+.footer-distributed .footer-center p span{
+ display:block;
+ font-weight: normal;
+ font-size:14px;
+ line-height:2;
+}
+ 
+.footer-distributed .footer-center p a{
+ color:  $color1;
+ text-decoration: none;;
+}
+ 
+.footer-distributed .footer-right{
+ width: 20%;
+}
+ 
+.footer-distributed .footer-company-about{
+ line-height: 20px;
+ color:  $color6;
+ font-size: 13px;
+ font-weight: normal;
+ margin: 0;
+}
+ 
+.footer-distributed .footer-company-about span{
+ display: block;
+ color:  $color4;
+ font-size: 14px;
+ font-weight: bold;
+ margin-bottom: 20px;
+}
+ 
+.footer-distributed .footer-icons{
+ margin-top: 25px;
+}
+ 
+.footer-distributed .footer-icons a{
+ display: inline-block;
+ width: 35px;
+ height: 35px;
+ cursor: pointer;
+ background-color:  $color3;
+ border-radius: 2px;
+ font-size: 20px;
+ color: $color4;
+ text-align: center;
+ line-height: 35px;
+ margin-right: 3px;
+ margin-bottom: 5px;
+}
+ 
+ 
+@media (max-width: 880px) {
+ 
+ .footer-distributed{
+ font: bold 14px sans-serif;
+ 
+ }
+ 
+ .footer-distributed .footer-left,
+ .footer-distributed .footer-center,
+ .footer-distributed .footer-right{
+ display: block;
+ width: 100%;
+ margin-bottom: 40px;
+ text-align: center;
+ }
+ 
+ .footer-distributed .footer-center i{
+ margin-left: 0;
+ }
+ .main {
+ line-height: normal;
+ font-size: auto;
+ }
+ 
+}
+/*--------------------------------------------*/

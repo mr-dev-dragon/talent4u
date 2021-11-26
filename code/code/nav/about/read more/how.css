@@ -1,0 +1,193 @@
+.a1 > .a2 {
+  height: 100%;
+  background: #FF0077;
+}
+
+.a2 {
+  overflow: hidden;
+}
+
+.scroll-animations-example > .scrollsection {
+  padding: 10vh 10vh 10vh 10vmax;
+  min-width: 550vh;
+}
+
+.scroll-animations-example > .scrollsection > .item {
+  display: inline-block;
+  position: relative;
+  margin: 0 -30vh 0 3vh;
+}
+
+.scroll-animations-example > .scrollsection > .item::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.scroll-animations-example > .scrollsection > .item.-big {
+  height: 80vh;
+  width: 60vh;
+}
+
+.scroll-animations-example > .scrollsection > .item.-big.-horizontal {
+  height: 60vh;
+  width: 80vh;
+}
+
+.scroll-animations-example > .scrollsection > .item.-normal {
+  height: 60vh;
+  width: 45vh;
+  z-index: 1;
+}
+
+.scroll-animations-example > .scrollsection > .item.-normal.-horizontal {
+  height: 45vh;
+  width: 60vh;
+}
+
+.scroll-animations-example > .scrollsection > .item.-normal:nth-of-type(3n) {
+  bottom: 5vh;
+}
+
+.scroll-animations-example > .scrollsection > .item.-normal:nth-of-type(4n) {
+  bottom: -5vh;
+}
+
+.scroll-animations-example > .scrollsection > .item.-small {
+  height: 40vh;
+  width: 30vh;
+  z-index: 2;
+}
+
+.scroll-animations-example > .scrollsection > .item.-small.-horizontal {
+  height: 30vh;
+  width: 40vh;
+}
+
+.scroll-animations-example > .scrollsection > .item.-small:nth-of-type(3n) {
+  bottom: 13vh;
+}
+
+.scroll-animations-example > .scrollsection > .item.-small:nth-of-type(4n) {
+  bottom: -13vh;
+}
+
+.scroll-animations-example > .scrollsection > .item > .image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translateX(0) translateY(0) scale(1);
+          transform: translateX(0) translateY(0) scale(1);
+  -webkit-transition: opacity 1s ease, -webkit-filter .3s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-filter .3s ease, -webkit-transform 1s ease;
+  transition: filter .3s ease, opacity 1s ease, transform 1s ease;
+  transition: filter .3s ease, opacity 1s ease, transform 1s ease, -webkit-filter .3s ease, -webkit-transform 1s ease;
+}
+
+.scroll-animations-example > .scrollsection > .item:nth-of-type(4n) > .image {
+  -webkit-transform: translateX(-30vh) translateY(-30vh) scale(0.8);
+          transform: translateX(-30vh) translateY(-30vh) scale(0.8);
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+.scroll-animations-example > .scrollsection > .item:nth-of-type(4n - 1) > .image {
+  -webkit-transform: translateX(30vh) translateY(30vh) scale(0.8);
+          transform: translateX(30vh) translateY(30vh) scale(0.8);
+  -webkit-transition-delay: .05s;
+          transition-delay: .05s;
+}
+
+.scroll-animations-example > .scrollsection > .item:nth-of-type(4n - 2) > .image {
+  -webkit-transform: translateX(-30vh) translateY(30vh) scale(0.8);
+          transform: translateX(-30vh) translateY(30vh) scale(0.8);
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
+.scroll-animations-example > .scrollsection > .item:nth-of-type(4n - 3) > .image {
+  -webkit-transform: translateX(-30vh) translateY(-30vh) scale(0.8);
+          transform: translateX(-30vh) translateY(-30vh) scale(0.8);
+  -webkit-transition-delay: .15s;
+          transition-delay: .15s;
+}
+
+.scroll-animations-example > .scrollsection > .item > .image.-active {
+  -webkit-transform: translateX(0) translateY(0) scale(1);
+          transform: translateX(0) translateY(0) scale(1);
+  opacity: .8;
+  pointer-events: auto;
+  -webkit-transition: opacity 1s ease, -webkit-filter .3s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-filter .3s ease, -webkit-transform 1s ease;
+  transition: filter .3s ease, opacity 1s ease, transform 1s ease;
+  transition: filter .3s ease, opacity 1s ease, transform 1s ease, -webkit-filter .3s ease, -webkit-transform 1s ease;
+}
+
+.scroll-animations-example > .scrollsection > .item > .image.-clicked {
+  -webkit-transform: translateX(0) translateY(0) scale(5);
+          transform: translateX(0) translateY(0) scale(5);
+  opacity: 0;
+  pointer-events: auto;
+  -webkit-transition: opacity 1s ease, -webkit-filter .3s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-filter .3s ease, -webkit-transform 1s ease;
+  transition: filter .3s ease, opacity 1s ease, transform 1s ease;
+  transition: filter .3s ease, opacity 1s ease, transform 1s ease, -webkit-filter .3s ease, -webkit-transform 1s ease;
+}
+
+.scroll-animations-example > .scrollsection > .item > .image.-active:hover {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.fake-ui {
+  font-size: 0;
+}
+
+.fake-ui > .logo {
+  position: fixed;
+  top: 2vh;
+  left: 2vh;
+  height: 3vh;
+  width: 2.5vh;
+  border: solid 1vh #fff;
+}
+
+.fake-ui > .nav {
+  position: fixed;
+  top: 2vh;
+  right: 2vh;
+}
+
+.fake-ui > .nav > .item {
+  background: #999;
+  display: inline-block;
+  height: 2vh;
+  width: 10vh;
+  margin-left: 2vh;
+}
+
+.fake-ui > .footer {
+  position: fixed;
+  bottom: 3vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 2vh;
+  width: 40vh;
+  background: #999;
+}
+/*# sourceMappingURL=how.css.map */

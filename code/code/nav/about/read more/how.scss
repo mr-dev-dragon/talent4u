@@ -1,0 +1,179 @@
+        
+.a1>.a2{
+    height: 100%;
+    background: #FF0077;
+
+}
+.a2{
+ overflow: hidden;
+}
+.scroll-animations-example {
+    > .scrollsection {
+        padding: 10vh 10vh 10vh 10vmax;
+        min-width: 550vh;
+    }
+
+    > .scrollsection > .item {
+        display: inline-block;
+        position: relative;
+        margin: 0 -30vh 0 3vh;
+    }
+
+    > .scrollsection > .item::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+
+    > .scrollsection > .item.-big {
+        height: 80vh;
+        width: 60vh;
+    }
+
+    > .scrollsection > .item.-big.-horizontal {
+        height: 60vh;
+        width: 80vh;
+    }
+
+    > .scrollsection > .item.-normal {
+        height: 60vh;
+        width: 45vh;
+        z-index: 1;
+    }
+
+    > .scrollsection > .item.-normal.-horizontal {
+        height: 45vh;
+        width: 60vh;
+    }
+
+    > .scrollsection > .item.-normal:nth-of-type(3n) {
+        bottom: 5vh;
+    }
+
+    > .scrollsection > .item.-normal:nth-of-type(4n) {
+        bottom: -5vh;
+    }
+
+    > .scrollsection > .item.-small {
+        height: 40vh;
+        width: 30vh;
+        z-index: 2;
+    }
+
+    > .scrollsection > .item.-small.-horizontal {
+        height: 30vh;
+        width: 40vh;
+    }
+
+    > .scrollsection > .item.-small:nth-of-type(3n) {
+        bottom: 13vh;
+    }
+
+    > .scrollsection > .item.-small:nth-of-type(4n) {
+        bottom: -13vh;
+    }
+
+    > .scrollsection > .item > .image {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        filter: grayscale(1);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(0) translateY(0) scale(1);
+        transition: filter .3s ease,
+            opacity 1s ease,
+            transform 1s ease;
+    }
+
+    > .scrollsection > .item:nth-of-type(4n) > .image {
+        transform: translateX(-30vh) translateY(-30vh) scale(.8);
+        transition-delay: 0;
+    }
+
+    > .scrollsection > .item:nth-of-type(4n - 1) > .image {
+        transform: translateX(30vh) translateY(30vh) scale(.8);
+        transition-delay: .05s;
+    }
+
+    > .scrollsection > .item:nth-of-type(4n - 2) > .image {
+        transform: translateX(-30vh) translateY(30vh) scale(.8);
+        transition-delay: .1s;
+    }
+
+    > .scrollsection > .item:nth-of-type(4n - 3) > .image {
+        transform: translateX(-30vh) translateY(-30vh) scale(.8);
+        transition-delay: .15s;
+    }
+
+    > .scrollsection > .item > .image.-active {
+        transform: translateX(0) translateY(0) scale(1);
+        opacity: .8;
+        pointer-events: auto;
+        transition: filter .3s ease,
+            opacity 1s ease,
+            transform 1s ease;
+    }
+
+    > .scrollsection > .item > .image.-clicked {
+        transform: translateX(0) translateY(0) scale(5);
+        opacity: 0;
+        pointer-events: auto;
+        transition: filter .3s ease,
+            opacity 1s ease,
+            transform 1s ease;
+    }
+
+    > .scrollsection > .item > .image.-active:hover {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        filter: grayscale(0);
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
+
+.fake-ui {
+    font-size: 0;
+    
+    > .logo {
+        position: fixed;
+        top: 2vh;
+        left: 2vh;
+        height: 3vh;
+        width: 2.5vh;
+        border: solid 1vh #fff;
+
+    }
+
+    > .nav {
+        position: fixed;
+        top: 2vh;
+        right: 2vh;
+    }
+
+    > .nav > .item {
+        background: #999;
+        display: inline-block;
+        height: 2vh;
+        width: 10vh;
+        margin-left: 2vh;
+    }
+
+    > .footer {
+        position: fixed;
+        bottom: 3vh;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2vh;
+        width: 40vh;
+        background: #999;
+    }
+}

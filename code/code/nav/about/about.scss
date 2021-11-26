@@ -1,0 +1,211 @@
+      @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+  $color1:#FF0077;
+  $color2:#6116A0;
+  $color3:#BF9CE6;
+  $color4:#ffff;
+  $color5:#123;
+
+      *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+ body,html{
+     height: 100%;
+
+ }
+nav
+{
+  position: fixed;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background:$color2;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+
+    ul
+    {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+       li
+      {
+       margin: 0 5px;
+               
+                a{
+                    color:$color4;
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: 500;
+                    padding: 8px 15px;
+                    border-radius: 5px;
+                    letter-spacing: 1px;
+                    transition: all 0.6s ease;
+
+          
+                }   
+                 a.active,a:hover
+                 {
+                    color:$color5 ;
+                    background: $color3;
+                 }
+       }
+    }
+    .menu-btn i
+    {
+        color: $color4;
+        font-size: 22px;
+        cursor: pointer;
+        display: none;
+    }
+}
+.red{
+  color: $color1 ;
+}
+
+    input[type="checkbox"]
+{
+  display: none;
+}
+
+
+
+
+.top{
+    margin-top: 80px;
+
+}
+.STOP{
+      position: fixed;
+          margin-top: 150px;
+}
+
+
+
+
+
+
+main{
+    width: 100%;
+    height: 100%;
+    article{
+        display: flex;
+        img{
+            width: 50rem;
+        }
+        aside{ 
+            margin: 0;
+            width: 50rem;
+            padding: 10rem 5rem 5rem 5rem;
+            h1{
+                color: $color1;
+                font-size: 5rem;
+                margin-top: -5rem;
+               margin-bottom: 0.5rem;
+
+
+
+                
+            }
+            h5{
+                font-size: 2rem;
+                color: $color2;
+                padding: 2rem;
+            }
+            p{
+                font-size: 1.5rem;
+                color: $color3;
+                    letter-spacing: 1px;
+
+            }
+            button{
+                    color:$color4;
+                    background-color:$color1;
+                    border: none;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    padding: 0.5rem 1rem;
+                    border-radius: 8%;
+                    letter-spacing: 1px;
+                    transition: all 0.6s ease;
+                    margin-top: 2rem; 
+                    margin-left:0.5rem ;
+            } 
+
+        }
+        
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 773px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background:$color2;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: $color1;
+  }
+
+}
+/*888888888888888888888888888888888888888888888888888888888*/
+
+
+
+
+
+
+
+
+
+
+
+
